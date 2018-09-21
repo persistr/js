@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "persistr",
+  "version": "2.0.0",
+  "description": "Persistr client for Node.JS",
+  "keywords": [
+    "CQRS",
+    "eventsourcing",
+    "eventstore",
+    "event",
+    "store",
+    "sourcing",
+    "client"
+  ],
+  "author": "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)",
+  "contributors": [
+    "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)"
+  ],
+  "homepage": "https://bitbucket.org/persistr/persistr1-node/src/master/",
+  "bugs": "https://bitbucket.org/persistr/persistr1-node/issues?status=new&status=open",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://sdasa@bitbucket.org/persistr/persistr1-node.git"
+  },
+  "main": "./lib/persistr",
+  "directories": {
+    "lib": "./lib"
+  },
+  "devDependencies": {
+    "vows": "^0.5.13"
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "async-queue": "^0.1.0",
+    "dotenv": "^6.0.0",
+    "highland": "^2.13.0",
+    "luxon": "^1.3.2",
+    "mysql": "^2.16.0",
+    "promise-mysql": "^3.3.1",
+    "pubnub": "^4.21.2",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5",
+    "scramjet": "^4.17.1",
+    "uuid": "^3.3.2",
+    "uuid-parse": "^1.0.0"
+  },
+  "engines": {
+    "node": "^10.7.0",
+    "npm": "^6.4.1"
+  },
+  "scripts": {
+    "repl": "node -e \"require('repl').start({ignoreUndefined: true})\" --experimental-repl-await",
+    "test": "node test/test.js"
+  }
+}
