@@ -35,6 +35,7 @@
     "async-queue": "^0.1.0",
     "dotenv": "^6.0.0",
     "highland": "^2.13.0",
+    "http-status-codes": "^1.3.0",
     "luxon": "^1.3.2",
     "mysql": "^2.16.0",
     "promise-mysql": "^3.3.1",
