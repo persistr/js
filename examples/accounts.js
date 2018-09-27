@@ -11,16 +11,14 @@ async function main() {
   // Authenticate with Persistr using your account email and password.
   // Then display account details.
   console.log('Authenticating with account email and password:')
-  const account = await persistr.account({ credentials: { email: 'demo@demo.com', password: 'demo' }})
-  const details = await account.details()
-  console.log(details)
+  let account = await persistr.account({ credentials: { email: 'demo@demo.com', password: 'demo' }})
+  console.log(await account.details())
 
   // Authenticate with Persistr using an API key. You must have an active Persistr
   // account. Grab your API key from your account details.
   console.log('Authenticating with account API key:')
-  const account = await persistr.account({ credentials: { apikey: process.env.PERSISTR_API_KEY }})
-  const details = await account.details()
-  console.log(details)
+  account = await persistr.account({ credentials: { apikey: process.env.PERSISTR_API_KEY }})
+  console.log(await account.details())
 }
 
 // Run main() and catch any errors.
