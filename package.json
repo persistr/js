@@ -24,6 +24,7 @@
     "url": "git+https://sdasa@bitbucket.org/persistr/persistr1-node.git"
   },
   "main": "./lib/persistr",
+  "types": "./lib/persistr.d.ts",
   "directories": {
     "lib": "./lib"
   },

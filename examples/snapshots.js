@@ -5,7 +5,7 @@
 require('dotenv').config()
 
 // Dependencies
-const persistr = require('../lib/persistr')
+const { persistr } = require('../lib/persistr')
 const uuidv4 = require('uuid/v4')
 
 async function main() {
