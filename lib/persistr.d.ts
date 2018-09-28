@@ -26,6 +26,7 @@ declare namespace Persistr {
         rename(to: string): Domain;
         stream(name: string): Stream;
         streams(): Streams;
+        events(options?: { after?: string, until?: string }): Events;
     }
 
     export interface Domains {
