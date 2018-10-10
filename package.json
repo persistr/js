@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "persistr",
-  "version": "2.0.0",
+  "name": "@persistr/nodejs",
+  "version": "2.1.0",
   "description": "Persistr client for Node.JS",
   "keywords": [
     "CQRS",
@@ -16,12 +16,12 @@
   "contributors": [
     "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)"
   ],
-  "homepage": "https://bitbucket.org/persistr/persistr1-node/src/master/",
-  "bugs": "https://bitbucket.org/persistr/persistr1-node/issues?status=new&status=open",
+  "homepage": "https://bitbucket.org/persistr/persistr2-node/src/master/",
+  "bugs": "https://bitbucket.org/persistr/persistr2-node/issues?status=new&status=open",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://sdasa@bitbucket.org/persistr/persistr1-node.git"
+    "url": "git+https://sdasa@bitbucket.org/persistr/persistr2-node.git"
   },
   "main": "./lib/persistr",
   "types": "./lib/persistr.d.ts",
