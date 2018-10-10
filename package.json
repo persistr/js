@@ -1,5 +1,5 @@
 {
-  "name": "@persistr/nodejs",
+  "name": "@persistr/node",
   "version": "2.1.0",
   "description": "Persistr client for Node.JS",
   "keywords": [
