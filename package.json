@@ -28,6 +28,7 @@
     "lib": "./lib"
   },
   "devDependencies": {
+    "deep-equal": "^1.0.1",
     "vows": "^0.5.13"
   },
   "dependencies": {
