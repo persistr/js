@@ -4,7 +4,6 @@
 require('dotenv').config()
 
 // Dependencies
-const equal = require('deep-equal')
 const fs = require('fs')
 const { persistr } = require('../lib/persistr')
 const uuidv4 = require('uuid/v4')
