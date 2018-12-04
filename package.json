@@ -53,6 +53,7 @@
   },
   "scripts": {
     "repl": "node -e \"require('repl').start({ignoreUndefined: true})\" --experimental-repl-await",
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "annotation": "node -r dotenv/config tools/annotation.js"
   }
 }
