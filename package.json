@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "deep-equal": "^1.0.1",
+    "mocha": "^5.2.0",
     "vows": "^0.5.13"
   },
   "dependencies": {
@@ -53,7 +54,7 @@
   },
   "scripts": {
     "repl": "node -e \"require('repl').start({ignoreUndefined: true})\" --experimental-repl-await",
-    "test": "node test/test.js",
+    "test": "./node_modules/.bin/mocha --reporter spec",
     "annotation": "node -r dotenv/config tools/annotation.js"
   }
 }
