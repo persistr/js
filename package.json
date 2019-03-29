@@ -15,12 +15,12 @@
   "contributors": [
     "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)"
   ],
-  "homepage": "https://bitbucket.org/persistr/persistr2-node/src/master/",
-  "bugs": "https://bitbucket.org/persistr/persistr2-node/issues?status=new&status=open",
+  "homepage": "https://github.com/persistrdb/persistr-js",
+  "bugs": "https://github.com/persistrdb/persistr-js/issues",
   "license": "LGPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://sdasa@bitbucket.org/persistr/persistr2-node.git"
+    "url": "git@github.com:persistrdb/persistr-js.git"
   },
   "main": "./lib/persistr",
   "types": "./lib/persistr.d.ts",
