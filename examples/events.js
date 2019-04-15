@@ -12,6 +12,7 @@ async function main() {
   // Authenticate with Persistr using an API key. You must have an active Persistr
   // account. Grab your API key from your account details.
   const account = await persistr.account({ credentials: { apikey: process.env.PERSISTR_API_KEY }})
+  //const account = await persistr.account({ credentials: { email: 'demo@demo.com', password: 'demo' }})
 
   // Access demo account, space, and domain. If the space doesn't exist, it will be
   // created. Since we're generating a new UUID as the space name, we'll get a brand
