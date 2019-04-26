@@ -28,18 +28,24 @@
     "lib": "./lib"
   },
   "devDependencies": {
+    "browserify-shim": "^3.8.14",
     "deep-equal": "^1.0.1",
     "mocha": "^5.2.0",
-    "vows": "^0.5.13"
+    "mustache": "^3.0.1",
+    "uglifyify": "^5.0.1",
+    "vows": "^0.5.13",
+    "zombie": "^6.1.4"
   },
   "dependencies": {
     "app-root-path": "^2.1.0",
     "async-queue": "^0.1.0",
     "btoa": "^1.2.1",
     "cross-fetch": "^3.0.2",
+    "delay": "^4.2.0",
     "dotenv": "^6.0.0",
     "highland": "^2.13.0",
     "http-status-codes": "^1.3.0",
+    "lru-cache": "^5.1.1",
     "luxon": "^1.3.2",
     "mysql": "^2.16.0",
     "promise-mysql": "^3.3.1",
@@ -53,8 +59,21 @@
     "npm": "^6.4.1"
   },
   "scripts": {
+    "build-debug": "node build.js ; browserify lib/persistr.js > dist/persistr.js",
+    "build": "node build.js ; browserify -g uglifyify lib/persistr.js | uglifyjs -c > dist/persistr.js",
     "repl": "node -e \"require('repl').start({ignoreUndefined: true})\" --experimental-repl-await",
     "test": "./node_modules/.bin/mocha --reporter spec",
     "annotation": "node -r dotenv/config tools/annotation.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "pubnub": "./vendors/pubnub.4.21.5.js"
+  },
+  "browserify-shim": {
+    "PubNub": "pubnub"
   }
 }
