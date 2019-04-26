@@ -1,7 +1,7 @@
 {
-  "name": "@persistr/client",
-  "version": "3.3.0",
-  "description": "Persistr client for Node.JS",
+  "name": "@persistr/js",
+  "version": "3.4.0",
+  "description": "Persistr client for Javascript",
   "keywords": [
     "CQRS",
     "eventsourcing",
