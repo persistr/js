@@ -26,7 +26,7 @@ declare namespace Persistr {
         rename(to: string): Domain;
         stream(name: string): Stream;
         streams(): Streams;
-        events(options?: { after?: string, until?: string }): Events;
+        events(options?: { types?: string | [string], after?: string, until?: string }): Events;
     }
 
     export interface Domains {
@@ -66,7 +66,7 @@ declare namespace Persistr {
         annotate(annotation: any): void;
         annotation(): Annotation;
         event(id: string): Event;
-        events(options?: { after?: string, until?: string }): Events;
+        events(options?: { types?: string | [string], after?: string, until?: string }): Events;
         destroy(): void;
         export(): void;
     }
