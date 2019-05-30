@@ -33,7 +33,7 @@
     "mocha": "^6.1.4",
     "mustache": "^3.0.1",
     "uglifyify": "^5.0.1",
-    "vows": "^0.5.13",
+    "vows": "^0.8.2",
     "zombie": "^6.1.4"
   },
   "dependencies": {
