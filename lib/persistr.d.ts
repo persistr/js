@@ -45,7 +45,7 @@ declare namespace Persistr {
     }
 
     export interface Events {
-        each(callback: (event: EventObject) => void): Promise<void>;
+        each(callback: (event: EventObject, subscription?: Subscription) => void): Promise<void>;
         write(events: EventObject | Array<EventObject>): number;
     }
 
@@ -73,6 +73,10 @@ declare namespace Persistr {
 
     export interface Streams {
         each(): Promise<void>;
+    }
+
+    export interface Subscription {
+        cancel(): Promise<void>;
     }
 }
 
