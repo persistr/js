@@ -51,6 +51,7 @@
     "promise-mysql": "^4.0.0",
     "pubnub": "^4.23.0",
     "scramjet": "^4.17.1",
+    "tenacious-fetch": "^2.2.2",
     "uuid": "^3.3.2",
     "uuid-parse": "^1.0.0"
   },
