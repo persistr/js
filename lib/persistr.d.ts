@@ -4,7 +4,7 @@
 
 export class Persistr {
     constructor();
-    account({ environment, credentials }: { environment: string, credentials: { apikey?: string; }}): Promise<Persistr.Account>;
+    account({ environment, credentials }: { environment?: string, credentials: { apikey?: string; }}): Promise<Persistr.Account>;
 }
 
 declare namespace Persistr {
