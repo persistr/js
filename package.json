@@ -37,7 +37,7 @@
     "zombie": "^6.1.4"
   },
   "dependencies": {
-    "app-root-path": "^2.1.0",
+    "app-root-path": "^3.0.0",
     "async-queue": "^0.1.0",
     "btoa": "^1.2.1",
     "cross-fetch": "^3.0.2",
