@@ -13,6 +13,10 @@ declare namespace Persistr {
         spaces(): Spaces;
     }
 
+    export interface Adapter {
+        on(callback: (event: EventObject) => void): Promise<void>;
+    }
+
     export interface Annotation {
         destroy(): void;
         export(): void;
@@ -47,6 +51,7 @@ declare namespace Persistr {
     export interface Events {
         each(callback: (event: EventObject, subscription?: Subscription) => void): Promise<void>;
         write(events: EventObject | Array<EventObject>): number;
+        via(options: any): Adapter;
     }
 
     export interface Space {
