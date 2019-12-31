@@ -15,12 +15,12 @@
   "contributors": [
     "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)"
   ],
-  "homepage": "https://github.com/persistrdb/persistr-js",
-  "bugs": "https://github.com/persistrdb/persistr-js/issues",
+  "homepage": "https://github.com/persistr/js",
+  "bugs": "https://github.com/persistr/js/issues",
   "license": "LGPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git@github.com:persistrdb/persistr-js.git"
+    "url": "git@github.com:persistr/js.git"
   },
   "main": "./lib/persistr",
   "types": "./lib/persistr.d.ts",
@@ -37,6 +37,8 @@
     "zombie": "^6.1.4"
   },
   "dependencies": {
+    "amqp-connection-manager": "^3.1.0",
+    "amqplib": "^0.5.5",
     "app-root-path": "^3.0.0",
     "async-queue": "^0.1.0",
     "btoa": "^1.2.1",
@@ -53,17 +55,12 @@
     "pubnub": "^4.23.0",
     "scramjet": "^4.17.1",
     "tenacious-fetch": "^2.2.2",
-    "tortoise": "^1.0.1",
     "uuid": "^3.3.2",
     "uuid-parse": "^1.0.0"
   },
-  "engines": {
-    "node": "^10.7.0",
-    "npm": "^6.4.1"
-  },
   "scripts": {
-    "build-debug": "node build.js ; browserify lib/persistr.js -i tortoise > dist/persistr.js",
-    "build": "node build.js ; browserify -g uglifyify lib/persistr.js -i tortoise | uglifyjs -c > dist/persistr.js",
+    "build-debug": "node build.js ; browserify lib/persistr.js > dist/persistr.js",
+    "build": "node build.js ; browserify -g uglifyify lib/persistr.js | uglifyjs -c > dist/persistr.js",
     "repl": "node -e \"require('repl').start({ignoreUndefined: true})\" --experimental-repl-await",
     "test": "./node_modules/.bin/mocha --reporter spec",
     "annotation": "node -r dotenv/config tools/annotation.js"
