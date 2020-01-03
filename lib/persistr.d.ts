@@ -18,16 +18,17 @@ declare namespace Persistr {
     }
 
     export interface Annotation {
-        destroy(): void;
-        export(): void;
+        destroy(): Promise<void>;
+        export(): Promise<void>;
         read(): Promise<any>;
     }
 
     export interface Domain {
-        create(): Domain;
-        destroy(): void;
-        export(): Domain;
-        rename(to: string): Domain;
+        create(): Promise<Domain>;
+        destroy(): Promise<void>;
+        export(): Promise<Domain>;
+        truncate(): Promise<void>;
+        rename(to: string): Promise<Domain>;
         stream(name: string): Stream;
         streams(): Streams;
         events(options?: { types?: string | string[], from?: string, to?: string, after?: string, until?: string }): Events;
@@ -38,8 +39,8 @@ declare namespace Persistr {
     }
 
     export interface Event {
-        destroy(): void;
-        export(): void;
+        destroy(): Promise<void>;
+        export(): Promise<void>;
         read(): Promise<any>;
     }
 
@@ -55,10 +56,10 @@ declare namespace Persistr {
     }
 
     export interface Space {
-        create(): Space;
-        destroy(): void;
-        export(): Space;
-        rename(to: string): Space;
+        create(): Promise<Space>;
+        destroy(): Promise<void>;
+        export(): Promise<Space>;
+        rename(to: string): Promise<Space>;
         domain(name: string): Domain;
         domains(): Domains;
     }
@@ -68,12 +69,12 @@ declare namespace Persistr {
     }
 
     export interface Stream {
-        annotate(annotation: any): void;
+        annotate(annotation: any): Promise<void>;
         annotation(): Annotation;
         event(id: string): Event;
         events(options?: { types?: string | string[], from?: string, to?: string, after?: string, until?: string }): Events;
-        destroy(): void;
-        export(): void;
+        destroy(): Promise<void>;
+        export(): Promise<void>;
     }
 
     export interface Streams {
