@@ -1,6 +1,6 @@
 {
   "name": "@persistr/js",
-  "version": "3.12.0",
+  "version": "3.12.1",
   "description": "Persistr client for Javascript",
   "keywords": [
     "CQRS",
