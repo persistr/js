@@ -30,7 +30,7 @@
   "devDependencies": {
     "browserify-shim": "^3.8.14",
     "deep-equal": "^1.0.1",
-    "mocha": "^6.1.4",
+    "mocha": "^8.1.1",
     "mustache": "^3.0.1",
     "uglifyify": "^5.0.1",
     "vows": "^0.8.2",
