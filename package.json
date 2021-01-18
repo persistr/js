@@ -54,7 +54,7 @@
     "matcher": "^2.0.0",
     "mysql": "^2.16.0",
     "node-eval": "^2.0.0",
-    "promise-mysql": "^4.0.0",
+    "promise-mysql": "^5.0.2",
     "pubnub": "^4.23.0",
     "pubsub-js": "^1.8.0",
     "scramjet": "^4.17.1",
