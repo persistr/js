@@ -47,6 +47,19 @@
     "tinyify": "^3.0.0",
     "vows": "^0.8.2"
   },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "plugins": [
+            "@babel/plugin-proposal-nullish-coalescing-operator",
+            "@babel/plugin-proposal-optional-chaining"
+          ]
+        }
+      ]
+    ]
+  },
   "scripts": {
     "build-debug": "node build.js ; browserify --no-builtins lib/persistr.js -t [ babelify --plugins [ @babel/plugin-proposal-nullish-coalescing-operator @babel/plugin-proposal-optional-chaining ] ] > dist/persistr.js",
     "build": "node build.js ; browserify --no-builtins -p tinyify lib/persistr.js -t [ babelify --plugins [ @babel/plugin-proposal-nullish-coalescing-operator @babel/plugin-proposal-optional-chaining ] ] > dist/persistr.js",
