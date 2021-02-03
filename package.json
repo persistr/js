@@ -26,6 +26,7 @@
     "async-queue": "^0.1.0",
     "bluebird": "^3.7.2",
     "btoa": "^1.2.1",
+    "connection-string-parser": "^1.0.3",
     "cross-fetch": "^3.0.2",
     "d3-array": "^2.4.0",
     "dotenv": "^8.0.0",
