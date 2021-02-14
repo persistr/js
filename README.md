@@ -58,9 +58,8 @@ await stream.event('ABM cash withdrawal', { debit: 2000 }).append()
 await stream.event('service charge', { debit: 200 }).append()
 ```
 
-Events are always appended to the stream.
+The first argument to `event()` is the event type and the second argument is the event data. Event type is always required but event data is optional. Events are always appended to a stream.
 
-The first argument to `event()` is the event type and the second argument is the event data.
 
 #### Reading events from a single stream
 
@@ -76,7 +75,7 @@ The value `caught-up` for the `until` selector is a special value that ends the 
 await stream.events().each(event => console.log(event))
 ```
 
-The above `await` will never complete because `stream.events()` without any selectors will simply listen forever to real-time events.
+This will read all historical events in the stream followed by a seamless transition to listening to real-time events.
 
 #### Reading events from multiple streams
 
@@ -86,15 +85,35 @@ Often, you'll want to read events from any event stream. To do that, invoke `eve
 await db.events({ until: 'caught-up', limit: 5 }).each(event => console.log(event))
 ```
 
-That will display the first 5 events in the database, regardless of what event stream they belong to.
-
-To establish a real-time subscription, omit the `until` selector:
+That will display the first 5 events in the database, regardless of what event stream they belong to. To establish a real-time subscription instead, omit the `until` selector:
 
 ```
 await db.events().each(event => console.log(event))
 ```
 
-This will read all historical events followed by all real-time events.
+This will read all historical events followed by listening to real-time events.
+
+#### Event selectors
+
+You can use any of the following selectors in the `events()` function:
+
+- **from**: Start from a specific event instead of from the first event available. The given event is included in the results. *Default:* Start on the first event available
+- **after**: Start after a specific event instead of from the first event available. The given event is NOT included in the results. Special value of `past-events` can be used to skip over all historical events and listen only to real-time events. *Default:* Start on the first event available
+- **to**: End on a specific event instead of on the last event available. The given event is included in the results. *Default:* No end
+- **until**: End just before a specific event. The given event is NOT included in the results. Special value of `caught-up` can be used to end results as soon as all historical events have been processed. *Default:* No end
+- **types**: Array of event types to include in results. *Default:* All event types are included in results
+- **limit**: Maximum number of events to include in results. *Default:* No maximum
+
+#### Event properties
+
+When you receive an event, it will have `data` and `metadata` properties. Data will contain whatever was passed in when the event was appended to a stream. Metadata is automatically assigned to the event by Persistr and contains:
+
+- **id**: Event identifier. Event IDs are guaranteed to be unique within a stream. A fully-qualified event identifier is composed of database name, stream identifier, and event identifier
+- **ts**: Event timestamp in UTC. This timestamp is assigned by Persistr upon writing the event
+- **tz**: Timezone of the event producer (the client that wrote the event)
+- **db**: Database identifier
+- **ns**: Namespace
+- **stream**: Stream identifier
 
 #### Cleaning up
 
@@ -103,6 +122,10 @@ Close the database when you're done.
 ```
 await db.close()
 ```
+
+## Examples
+
+An official collection of example code is [available here](https://github.com/persistr/examples). All examples run out-of-the-box with a default install of Persistr Server on a local machine.
 
 ## License
 
