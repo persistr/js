@@ -1,6 +1,6 @@
 {
   "name": "@persistr/js",
-  "version": "4.5.2",
+  "version": "4.5.3",
   "description": "Persistr client for Javascript",
   "main": "./lib/persistr",
   "unpkg": "./dist/persistr.js",
