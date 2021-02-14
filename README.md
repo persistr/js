@@ -109,6 +109,7 @@ You can use any of the following selectors in the `events()` function:
 When you receive an event, it will have `data` and `metadata` properties. Data will contain whatever was passed in when the event was appended to a stream. Metadata is automatically assigned to the event by Persistr and contains:
 
 - **id**: Event identifier. Event IDs are guaranteed to be unique within a stream. A fully-qualified event identifier is composed of database name, stream identifier, and event identifier
+- **type**: Event type
 - **ts**: Event timestamp in UTC. This timestamp is assigned by Persistr upon writing the event
 - **tz**: Timezone of the event producer (the client that wrote the event)
 - **db**: Database identifier
