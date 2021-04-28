@@ -1,0 +1,51 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.16
+    - 7.12.17
+    - 7.13.1
+    - 7.13.10
+    - 7.13.13
+    - 7.13.14
+    - 7.13.15
+    - 7.13.8
+  - dependency-name: d3-array
+    versions:
+    - 2.11.0
+    - 2.12.0
+  - dependency-name: "@babel/plugin-proposal-nullish-coalescing-operator"
+    versions:
+    - 7.12.13
+    - 7.13.0
+  - dependency-name: fetch-retry
+    versions:
+    - 4.1.0
+  - dependency-name: sift
+    versions:
+    - 13.5.0
+  - dependency-name: matcher
+    versions:
+    - 3.0.0
+  - dependency-name: luxon
+    versions:
+    - 1.25.0
+  - dependency-name: mustache
+    versions:
+    - 4.1.0
+  - dependency-name: mocha
+    versions:
+    - 8.2.1
+    - 8.3.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: acorn
+    versions:
+    - 5.7.4
