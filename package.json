@@ -29,7 +29,7 @@
     "btoa": "^1.2.1",
     "connection-string-parser": "^1.0.3",
     "cross-fetch": "^3.0.2",
-    "d3-array": "^2.4.0",
+    "d3-array": "^3.0.1",
     "dotenv": "^8.0.0",
     "eventsource": "^1.0.7",
     "fetch-retry": "^4.0.1",
