@@ -24,7 +24,7 @@
     "url": "git@github.com:persistr/js.git"
   },
   "dependencies": {
-    "@persistr/store": "^4.9.0",
+    "@persistr/store": "^4.9.1",
     "async-queue": "^0.1.0",
     "bluebird": "^3.7.2",
     "btoa": "^1.2.1",
