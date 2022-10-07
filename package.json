@@ -46,7 +46,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "babelify": "^10.0.0",
-    "mustache": "^3.0.1",
+    "mustache": "^4.2.0",
     "tinyify": "^3.0.0"
   },
   "browserify": {
