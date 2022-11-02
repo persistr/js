@@ -33,7 +33,7 @@
     "d3-array": "^2.4.0",
     "dotenv": "^8.0.0",
     "eventsource": "^1.0.7",
-    "fetch-retry": "^4.0.1",
+    "fetch-retry": "^5.0.3",
     "glob": "^7.2.0",
     "lru-cache": "^5.1.1",
     "luxon": "^2.0.1",
