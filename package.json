@@ -30,7 +30,7 @@
     "btoa": "^1.2.1",
     "connection-string-parser": "^1.0.3",
     "cross-fetch": "^3.1.5",
-    "d3-array": "^2.4.0",
+    "d3-array": "^3.2.3",
     "dotenv": "^16.0.3",
     "eventsource": "^1.0.7",
     "fetch-retry": "^5.0.3",
